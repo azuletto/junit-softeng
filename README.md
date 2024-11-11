@@ -87,5 +87,4 @@ Execute os testes com Maven:
 ```mvn test```
 Verifique os relatórios de teste: Acesse target/surefire-reports para visualizar o resultado e cobertura dos testes realizados.
 
-📈 Análise de Cobertura
-Para validar a qualidade dos testes, foi utilizada a cobertura de código com o EclEmma. O objetivo foi alcançar uma cobertura que assegure a verificação de todas as funcionalidades e fluxos alternativos definidos no sistema.
+
