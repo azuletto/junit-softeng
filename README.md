@@ -8,8 +8,26 @@ Este repositório implementa um **Sistema de Empréstimo de Biblioteca** em Java
 
 ## 📂 Estrutura do Projeto
 
-demo/ ├── src/ │ ├── main/java/com/example/ │ │ ├── Aluno.java │ │ ├── App.java │ │ ├── Controle.java │ │ ├── Debito.java │ │ ├── Emprestimo.java │ │ ├── Item.java │ │ ├── Livro.java │ │ └── Titulo.java │ └── test/java/com/example/ │ ├── ControleTest.java │ └── EmprestimoTest.java ├── target/ │ └── surefire-reports/ # Relatórios de testes └── pom.xml
+## 📂 Estrutura do Projeto
 
+```plaintext
+demo/
+├── src/
+│   ├── main/java/com/example/
+│   │   ├── Aluno.java
+│   │   ├── App.java
+│   │   ├── Controle.java
+│   │   ├── Debito.java
+│   │   ├── Emprestimo.java
+│   │   ├── Item.java
+│   │   ├── Livro.java
+│   │   └── Titulo.java
+│   └── test/java/com/example/
+│       ├── ControleTest.java
+│       └── EmprestimoTest.java
+├── target/
+│   └── surefire-reports/    # Relatórios de testes
+└── pom.xml
 ---
 
 ## 🔍 Funcionalidades
