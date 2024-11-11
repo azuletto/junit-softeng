@@ -6,7 +6,7 @@ Este repositório implementa um **Sistema de Empréstimo de Biblioteca** em Java
 
 ---
 
-## 📂 Estrutura do Projeto
+### 📂 Estrutura do Projeto
 
 ```plaintext
 demo/
@@ -29,7 +29,7 @@ demo/
 ```
 ---
 
-## 🔍 Funcionalidades
+### 🔍 Funcionalidades
 
 ### Regras de Empréstimo
 
@@ -41,7 +41,7 @@ demo/
 
 ---
 
-## ✅ Testes Unitários
+### ✅ Testes Unitários
 
 Os testes foram desenvolvidos utilizando **JUnit** e cobrem cenários chave do sistema, verificando cada regra e validação necessária. 
 
@@ -68,7 +68,7 @@ Os relatórios de teste estão disponíveis em `target/surefire-reports` e podem
 
 ---
 
-## 🚀 Tecnologias e Ferramentas
+### 🚀 Tecnologias e Ferramentas
 
 - **Java**: Linguagem de programação principal.
 - **JUnit**: Framework de testes para validação das funcionalidades.
@@ -77,7 +77,7 @@ Os relatórios de teste estão disponíveis em `target/surefire-reports` e podem
 
 ---
 
-## 🛠 Como Executar
+### 🛠 Como Executar
 
 1. **Clone o repositório**:
    ```bash
