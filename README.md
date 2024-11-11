@@ -28,6 +28,7 @@ demo/
 ├── target/
 │   └── surefire-reports/    # Relatórios de testes
 └── pom.xml
+```
 ---
 
 ## 🔍 Funcionalidades
