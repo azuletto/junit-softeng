@@ -8,8 +8,6 @@ Este repositório implementa um **Sistema de Empréstimo de Biblioteca** em Java
 
 ## 📂 Estrutura do Projeto
 
-## 📂 Estrutura do Projeto
-
 ```plaintext
 demo/
 ├── src/
