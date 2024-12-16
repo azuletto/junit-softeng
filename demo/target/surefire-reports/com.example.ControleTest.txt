@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: com.example.ControleTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.133 s <<< FAILURE! -- in com.example.ControleTest
-com.example.ControleTest.testEmprestimoTodosLivrosDisponiveis -- Time elapsed: 0.012 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Empréstimo deveria ser permitido quando todos os livros estão disponíveis. ==> expected: <true> but was: <false>
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.130 s <<< FAILURE! -- in com.example.ControleTest
+com.example.ControleTest.testEmprestimo_QuandoAlunoValidoSemDebitoEComLivrosDisponiveis_DeveSerPermitido -- Time elapsed: 0.011 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Empréstimo deveria ser permitido para aluno válido sem débitos e com livros disponíveis. ==> expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
-	at com.example.ControleTest.testEmprestimoTodosLivrosDisponiveis(ControleTest.java:55)
+	at com.example.ControleTest.testEmprestimo_QuandoAlunoValidoSemDebitoEComLivrosDisponiveis_DeveSerPermitido(ControleTest.java:28)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
@@ -80,14 +80,14 @@ org.opentest4j.AssertionFailedError: Empréstimo deveria ser permitido quando to
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.example.ControleTest.testEmprestimoAlunoValidoSemDebitoComLivrosDisponiveis -- Time elapsed: 0.004 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Empréstimo deveria ser permitido para aluno válido sem débitos com livros disponíveis. ==> expected: <true> but was: <false>
+com.example.ControleTest.testEmprestimo_QuandoTodosLivrosDisponiveis_DeveSerPermitido -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Empréstimo deveria ser permitido quando todos os livros estão disponíveis. ==> expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
-	at com.example.ControleTest.testEmprestimoAlunoValidoSemDebitoComLivrosDisponiveis(ControleTest.java:28)
+	at com.example.ControleTest.testEmprestimo_QuandoTodosLivrosDisponiveis_DeveSerPermitido(ControleTest.java:66)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)

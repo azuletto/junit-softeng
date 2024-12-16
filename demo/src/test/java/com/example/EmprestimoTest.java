@@ -1,36 +1,62 @@
 package com.example;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.List;
+import static org.mockito.Mockito.*;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class EmprestimoTest {
 
-    @Test
-    public void testEmprestarLivrosDisponiveis() {
-        List<Livro> livros = new ArrayList<>();
-        livros.add(new Livro("Livro 1", 1));
-        livros.add(new Livro("Livro 2", 2));
+    private Emprestimo emprestimo;
+    private List<Livro> livrosDisponiveis;
+    private Livro livroIndisponivel;
 
-        Emprestimo emprestimo = new Emprestimo();
-        assertTrue(emprestimo.emprestar(livros));
+    @BeforeEach
+    public void setUp() {
+        emprestimo = new Emprestimo();
+
+        livrosDisponiveis = new ArrayList<>();
+        livrosDisponiveis.add(new Livro("Livro 1", 1));
+        livrosDisponiveis.add(new Livro("Livro 2", 2));
+
+        livroIndisponivel = new Livro("Livro 3", 3);
+        livroIndisponivel.setDisponivel(false);
     }
 
     @Test
-    public void testEmprestarLivroIndisponivel() {
-        List<Livro> livros = new ArrayList<>();
-        Livro livro = new Livro("Livro 1", 1);
-        livro.setDisponivel(false);
-        livros.add(livro);
-
-        Emprestimo emprestimo = new Emprestimo();
-        assertFalse(emprestimo.emprestar(livros));
+    public void devePermitirEmprestarLivrosDisponiveis() {
+        assertTrue(emprestimo.emprestar(livrosDisponiveis),
+                "O empréstimo deveria ser permitido quando todos os livros estão disponíveis.");
     }
 
     @Test
-    public void testAlunoComDebito() {
-        Aluno aluno = new Aluno("10");
-        assertTrue(aluno.verificaDebito());
+    public void naoDevePermitirEmprestarLivroIndisponivel() {
+        List<Livro> livros = new ArrayList<>();
+        livros.add(livroIndisponivel);
+
+        assertFalse(emprestimo.emprestar(livros),
+                "O empréstimo não deveria ser permitido quando há livros indisponíveis.");
+    }
+
+    @Test
+    public void naoDevePermitirEmprestarSeAlunoPossuiDebito() {
+        Aluno alunoMock = mock(Aluno.class);
+        when(alunoMock.verificaDebito()).thenReturn(true);
+
+        assertTrue(alunoMock.verificaDebito(),
+                "O aluno deveria ser identificado com débito.");
+    }
+
+    @Test
+    public void devePermitirEmprestarParaAlunoSemDebito() {
+        Aluno alunoMock = mock(Aluno.class);
+        when(alunoMock.verificaDebito()).thenReturn(false);
+
+        assertFalse(alunoMock.verificaDebito(),
+                "O aluno não deveria ser identificado com débito.");
     }
 }
