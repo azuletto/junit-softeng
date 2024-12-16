@@ -81,7 +81,7 @@ Os relatórios de teste estão disponíveis em `target/surefire-reports` e podem
 
 1. **Clone o repositório**:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/azuletto/junit-softeng
    cd demo
 Execute os testes com Maven:
 ```mvn test```
